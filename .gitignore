@@ -1,0 +1,9 @@
+*
+!.config/
+!.config/labwc/
+!.config/labwc/**
+!.config/kanshi/
+!.config/kanshi/**
+!.gitignore
+!.bashrc
+!README.md
