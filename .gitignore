@@ -1,9 +1,15 @@
 *
+
+!.bashrc
+
 !.config/
 !.config/labwc/
 !.config/labwc/**
 !.config/kanshi/
 !.config/kanshi/**
+
+!wallpapers/
+!wallpapers/b-926.jpg
+
 !.gitignore
-!.bashrc
 !README.md
