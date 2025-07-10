@@ -16,7 +16,18 @@ paru -S swaylock-fancy-git
 # todo
 
 labwc (openbox?) config:
-- lock, swaylock-fancy
+- lock (shortcut to `swaylock-fancy`)
+- other generic window management shortcuts
+- ctrl+alt+t terminal
+
+other stuff:
+- app launcher (+shortcut) (rofi-wayland `rofi -show drun`?)
+- notifications
+- clipboard manager (history?)
+- status bar
 
 # accidental PR(s) to make stuff work
 [Support any WM implementing the wlr-output-management protocol #10](https://github.com/Big-B/swaylock-fancy/pull/10)
+
+# time spent
+00:13 - 02:48 (2h35m): swaylock-fancy, other stuff idk
