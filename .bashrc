@@ -9,13 +9,7 @@ esac
 export TERMINAL=$(which gnome-terminal)
 
 alias startx="labwc -s \"sh -c 'wl-clip-persist --clipboard regular & /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & kanshi & swaybg -i wallpapers/b-926.jpg >/dev/null 2>&1 & firefox'\""
-
-if [[ "$(tty)" == "/dev/tty1" && $HOSTNAME == "muis" ]]; then
-    FLAG_FILE="/tmp/.tty1_login_ran"
-
-    if [ ! -f "$FLAG_FILE" ]; then
-        touch "$FLAG_FILE"
-        startx > /dev/null 2>&1
-        exit
-    fi
+if [ "$XDG_VTNR" = "1" ] && [ -z "$DISPLAY" ] && [ $HOSTNAME == "muis" ]; then
+    startx > /dev/null 2>&1
+    exit
 fi
