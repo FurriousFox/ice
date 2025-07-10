@@ -17,3 +17,6 @@ paru -S swaylock-fancy-git
 
 labwc (openbox?) config:
 - lock, swaylock-fancy
+
+# accidental PR(s) to make stuff work
+[Support any WM implementing the wlr-output-management protocol #10](https://github.com/Big-B/swaylock-fancy/pull/10)
