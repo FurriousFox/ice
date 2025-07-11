@@ -9,8 +9,9 @@ tbd
 # installation (arch)
 
 ```sh
-pacman -S kanshi labwc xorg-xhost xorg-xwayland swaybg xdg-desktop-portal-gtk adwaita-qt polkit-gnome wl-clip-persist rofi-wayland swaylock wlr-randr brightnessctl alsa-utils
+pacman -S kanshi labwc xorg-xhost xorg-xwayland swaybg xdg-desktop-portal-gtk adwaita-qt polkit-gnome wl-clip-persist rofi-wayland swaylock wlr-randr brightnessctl alsa-utils grim slurp wl-clipboard
 paru -S swaylock-fancy-git
+mkdir ~/Screenshots/
 ```
 
 # todo
