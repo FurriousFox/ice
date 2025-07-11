@@ -33,7 +33,7 @@
         <region name="center" x="10%" y="10%" width="80%" height="80%" />
     </regions>
 
-    <desktops number="1" />
+    <desktops number="3" />
 
     <theme>
         <!-- <name>onyx</name> -->
@@ -91,6 +91,9 @@
             <action name="ToggleMaximize" />
         </keybind>
         <keybind key="A-=">
+            <action name="ToggleMaximize" />
+        </keybind>
+        <keybind key="W-Up">
             <action name="ToggleMaximize" />
         </keybind>
 
@@ -165,9 +168,72 @@
         <keybind key="W-]">
             <action name="GoToDesktop" to="right" wrap="false" />
         </keybind>
+        <keybind key="W-1">
+            <action name="GoToDesktop" to="1" wrap="false" />
+        </keybind>
+        <keybind key="W-2">
+            <action name="GoToDesktop" to="2" wrap="false" />
+        </keybind>
+        <keybind key="W-3">
+            <action name="GoToDesktop" to="3" wrap="false" />
+        </keybind>
+        <keybind key="W-4">
+            <action name="GoToDesktop" to="4" wrap="false" />
+        </keybind>
+        <keybind key="W-5">
+            <action name="GoToDesktop" to="5" wrap="false" />
+        </keybind>
+        <keybind key="W-6">
+            <action name="GoToDesktop" to="6" wrap="false" />
+        </keybind>
+        <keybind key="W-7">
+            <action name="GoToDesktop" to="7" wrap="false" />
+        </keybind>
+        <keybind key="W-8">
+            <action name="GoToDesktop" to="8" wrap="false" />
+        </keybind>
+        <keybind key="W-9">
+            <action name="GoToDesktop" to="9" wrap="false" />
+        </keybind>
+        <keybind key="W-0">
+            <action name="GoToDesktop" to="10" wrap="false" />
+        </keybind>
 
-        <keybind key="W-]">
-            <action name="GoToDesktop" to="right" wrap="false" />
+        <keybind key="W-S-[">
+            <action name="SendToDesktop" to="left" follow="yes" wrap="true" />
+        </keybind>
+        <keybind key="W-S-]">
+            <action name="SendToDesktop" to="right" follow="yes" wrap="true" />
+        </keybind>
+        <keybind key="W-S-1">
+            <action name="SendToDesktop" to="1" follow="yes" wrap="false" />
+        </keybind>
+        <keybind key="W-S-2">
+            <action name="SendToDesktop" to="2" follow="yes" wrap="false" />
+        </keybind>
+        <keybind key="W-S-3">
+            <action name="SendToDesktop" to="3" follow="yes" wrap="false" />
+        </keybind>
+        <keybind key="W-S-4">
+            <action name="SendToDesktop" to="4" follow="yes" wrap="false" />
+        </keybind>
+        <keybind key="W-S-5">
+            <action name="SendToDesktop" to="5" follow="yes" wrap="false" />
+        </keybind>
+        <keybind key="W-S-6">
+            <action name="SendToDesktop" to="6" follow="yes" wrap="false" />
+        </keybind>
+        <keybind key="W-S-7">
+            <action name="SendToDesktop" to="7" follow="yes" wrap="false" />
+        </keybind>
+        <keybind key="W-S-8">
+            <action name="SendToDesktop" to="8" follow="yes" wrap="false" />
+        </keybind>
+        <keybind key="W-S-9">
+            <action name="SendToDesktop" to="9" follow="yes" wrap="false" />
+        </keybind>
+        <keybind key="W-S-0">
+            <action name="SendToDesktop" to="10" follow="yes" wrap="false" />
         </keybind>
 
         <keybind key="W-S-+">
@@ -179,7 +245,185 @@
                 command="bash -c &quot;D_NUM=$(cat ~/.config/labwc/rc.xml | grep -P -o '(?&lt;=&lt;desktops number=\&quot;)\d+?(?=\&quot; ?/>)' | awk '{print ($1 - 1 &lt; 1) ? 1 : $1 - 1}') bash -c 'sed -i -r \&quot;s/&lt;desktops number=\\\&quot;([0-9]+?)\\\&quot;/&lt;desktops number=\\\&quot;$D_NUM\\\&quot;/gm\&quot; ~/.config/labwc/rc.xml'; labwc -r &quot;" />
         </keybind>
 
+        <!-- move everything to window -->
+        <keybind key="C-A-S-{">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="left" follow="no" wrap="yes" />
+                </then>
+            </action>
 
+            <action name="GoToDesktop" to="left" wrap="true" />
+        </keybind>
+        <keybind key="C-A-S-}">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="right" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="right" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-1">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="1" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="1" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-2">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="2" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="2" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-3">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="3" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="3" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-4">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="4" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="4" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-5">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="5" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="5" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-6">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="6" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="6" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-7">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="7" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="7" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-8">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="8" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="8" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-9">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="9" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="9" wrap="false" />
+        </keybind>
+        <keybind key="C-A-S-0">
+            <action name="ForEach">
+                <query desktop="current" />
+                <then>
+                    <action name="SendToDesktop" to="10" follow="no" wrap="yes" />
+                </then>
+            </action>
+
+            <action name="GoToDesktop" to="10" wrap="false" />
+        </keybind>
+
+        <!-- move current without follow -->
+        <keybind key="W-A-S-[">
+            <action name="SendToDesktop" to="left" follow="no" wrap="true" />
+        </keybind>
+        <keybind key="W-A-S-]">
+            <action name="SendToDesktop" to="right" follow="no" wrap="true" />
+        </keybind>
+        <keybind key="W-A-S-1">
+            <action name="SendToDesktop" to="1" follow="no" wrap="false" />
+        </keybind>
+        <keybind key="W-A-S-2">
+            <action name="SendToDesktop" to="2" follow="no" wrap="false" />
+        </keybind>
+        <keybind key="W-A-S-3">
+            <action name="SendToDesktop" to="3" follow="no" wrap="false" />
+        </keybind>
+        <keybind key="W-A-S-4">
+            <action name="SendToDesktop" to="4" follow="no" wrap="false" />
+        </keybind>
+        <keybind key="W-A-S-5">
+            <action name="SendToDesktop" to="5" follow="no" wrap="false" />
+        </keybind>
+        <keybind key="W-A-S-6">
+            <action name="SendToDesktop" to="6" follow="no" wrap="false" />
+        </keybind>
+        <keybind key="W-A-S-7">
+            <action name="SendToDesktop" to="7" follow="no" wrap="false" />
+        </keybind>
+        <keybind key="W-A-S-8">
+            <action name="SendToDesktop" to="8" follow="no" wrap="false" />
+        </keybind>
+        <keybind key="W-A-S-9">
+            <action name="SendToDesktop" to="9" follow="no" wrap="false" />
+        </keybind>
+        <keybind key="W-A-S-0">
+            <action name="SendToDesktop" to="10" follow="no" wrap="false" />
+        </keybind>
+
+        <!-- screenshot -->
+
+        <!-- notification -->
+
+        <!-- files -->
+
+        <!-- taskmgr -->
+
+        <!-- slaapstand -->
+
+        <!-- run box -->
+
+        <!-- clipboard history -->
+
+        <!-- emoji chooser -->
+
+        <!-- hide cursor when typing -->
+
+        <!-- bluetooth? -->
     </keyboard>
 
     <windowRules>
