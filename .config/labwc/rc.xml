@@ -5,14 +5,154 @@
         <gap>0</gap>
         <allowTearing>no</allowTearing>
         <autoEnableOutputs>no</autoEnableOutputs>
-        <xwaylandPersistence>yes</xwaylandPersistence>
+        <xwaylandPersistence>yes</xwaylandPersistence> <!-- related to xhost +SI:localuser:root -->
     </core>
 
     <placement>
         <policy>cascade</policy>
     </placement>
 
-    <windowSwitcher show="no" preview="yes" outlines="yes" allWorkspaces="no">
-
+    <windowSwitcher show="yes" preview="yes"
+        outlines="yes" allWorkspaces="no">
+        <fields>
+            <!-- <field content="custom" format="%I" width="100%" /> -->
+        </fields>
     </windowSwitcher>
+
+    <focus>
+        <followMouse>yes</followMouse> <!-- the only objectively correct way to handle focus -->
+        <followMouseRequiresMovement>yes</followMouseRequiresMovement>
+        <raiseOnFocus>no</raiseOnFocus>
+    </focus>
+
+    <snapping>
+
+    </snapping>
+
+    <regions>
+        <region name="center" x="10%" y="10%" width="80%" height="80%" />
+    </regions>
+
+    <desktops
+        number="1">
+        <prefix></prefix>
+    </desktops>
+
+    <theme>
+        <!-- <name>onyx</name> -->
+        <titlebar>
+            <layout>icon:iconify,max,close</layout>
+            <showTitle>yes</showTitle>
+        </titlebar>
+    </theme>
+
+    <!-- maybe needed for when adding a bar? -->
+    <!-- <margin top="" bottom="" left="" right="" output=""/> -->
+
+    <keyboard>
+        <numlock>no</numlock>
+        <layoutScope>global</layoutScope>
+
+        <!-- lock -->
+        <keybind key="W-L">
+            <action name="Execute" command="swaylock-fancy" />
+        </keybind>
+
+        <keybind key="A-Tab">
+            <action name="NextWindow" />
+        </keybind>
+
+        <keybind key="A-S-Tab">
+            <action name="PreviousWindow" />
+        </keybind>
+
+        <keybind key="W-Return">
+            <action name="Execute" command="gnome-terminal" />
+        </keybind>
+
+        <keybind key="C-A-t">
+            <action name="Execute" command="gnome-terminal" />
+        </keybind>
+
+        <keybind key="A-F4">
+            <action name="Close" />
+        </keybind>
+
+        <keybind key="S-A-F4">
+            <action name="Kill" />
+        </keybind>
+
+        <keybind key="W-d">
+            <action name="AutoPlace" policy="cascade" />
+        </keybind>
+
+        <keybind key="W-s">
+            <action name="AutoPlace" policy="center" />
+        </keybind>
+
+        <keybind key="W-a">
+            <action name="ToggleMaximize" />
+        </keybind>
+
+        <keybind key="F11">
+            <action name="ToggleFullscreen" />
+        </keybind>
+
+        <keybind key="W-S-Up">
+            <action name="Raise" />
+        </keybind>
+
+        <keybind key="W-S-Down">
+            <action name="Lower" />
+        </keybind>
+
+        <keybind key="W-`">
+            <action name="ToggleAlwaysOnTop" />
+        </keybind>
+
+        <keybind key="A-Space">
+            <action name="ShowMenu" menu="client-menu" atCursor="no" />
+        </keybind>
+
+        <keybind key="XF86_MonBrightnessUp">
+            <action name="Execute" command="brightnessctl set +10%" />
+        </keybind>
+
+        <keybind key="XF86_MonBrightnessDown">
+            <action name="Execute" command="brightnessctl set 10%-" />
+        </keybind>
+
+        <keybind key="XF86_AudioRaiseVolume">
+            <action name="Execute" command="amixer sset Master 5%+" />
+        </keybind>
+
+        <keybind key="XF86_AudioLowerVolume">
+            <action name="Execute" command="amixer sset Master 5%-" />
+        </keybind>
+
+        <keybind key="XF86_AudioMute">
+            <action name="Execute" command="amixer sset Master toggle" />
+        </keybind>
+
+
+        <keybind key="S-XF86_MonBrightnessUp">
+            <action name="Execute" command="brightnessctl set +5%" />
+        </keybind>
+
+        <keybind key="S-XF86_MonBrightnessDown">
+            <action name="Execute" command="brightnessctl set 5%-" />
+        </keybind>
+
+        <keybind key="S-XF86_AudioRaiseVolume">
+            <action name="Execute" command="amixer sset Master 2%+" />
+        </keybind>
+
+        <keybind key="S-XF86_AudioLowerVolume">
+            <action name="Execute" command="amixer sset Master 2%-" />
+        </keybind>
+    </keyboard>
+
+    <windowRules>
+        <windowRule identifier="Alacritty" matchOnce="yes" skipWindowSwitcher="true" />
+    </windowRules>
 </labwc_config>
