@@ -33,8 +33,7 @@
         <region name="center" x="10%" y="10%" width="80%" height="80%" />
     </regions>
 
-    <desktops
-        number="1">
+    <desktops number="4">
         <prefix></prefix>
     </desktops>
 
@@ -93,6 +92,16 @@
         <keybind key="W-a">
             <action name="ToggleMaximize" />
         </keybind>
+        <keybind key="A-=">
+            <action name="ToggleMaximize" />
+        </keybind>
+
+        <keybind key="W-Down">
+            <action name="Iconify" />
+        </keybind>
+        <keybind key="A--">
+            <action name="Iconify" />
+        </keybind>
 
         <keybind key="F11">
             <action name="ToggleFullscreen" />
@@ -150,6 +159,15 @@
         <keybind key="S-XF86_AudioLowerVolume">
             <action name="Execute" command="amixer sset Master 2%-" />
         </keybind>
+
+        <!-- workspaces -->
+        <keybind key="W-[">
+            <action name="GoToDesktop" to="left" wrap="false" />
+        </keybind>
+        <keybind key="W-]">
+            <action name="GoToDesktop" to="right" wrap="false" />
+        </keybind>
+
     </keyboard>
 
     <windowRules>
