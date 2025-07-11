@@ -33,9 +33,7 @@
         <region name="center" x="10%" y="10%" width="80%" height="80%" />
     </regions>
 
-    <desktops number="4">
-        <prefix></prefix>
-    </desktops>
+    <desktops number="1" />
 
     <theme>
         <!-- <name>onyx</name> -->
@@ -167,6 +165,20 @@
         <keybind key="W-]">
             <action name="GoToDesktop" to="right" wrap="false" />
         </keybind>
+
+        <keybind key="W-]">
+            <action name="GoToDesktop" to="right" wrap="false" />
+        </keybind>
+
+        <keybind key="W-S-+">
+            <action name="Execute"
+                command="bash -c &quot;D_NUM=$(cat ~/.config/labwc/rc.xml | grep -P -o '(?&lt;=&lt;desktops number=\&quot;)\d+?(?=\&quot; ?/>)' | awk '{print $1 + 1}') bash -c 'sed -i -r \&quot;s/&lt;desktops number=\\\&quot;([0-9]+?)\\\&quot;/&lt;desktops number=\\\&quot;$D_NUM\\\&quot;/gm\&quot; ~/.config/labwc/rc.xml'; labwc -r &quot;" />
+        </keybind>
+        <keybind key="W-S-_">
+            <action name="Execute"
+                command="bash -c &quot;D_NUM=$(cat ~/.config/labwc/rc.xml | grep -P -o '(?&lt;=&lt;desktops number=\&quot;)\d+?(?=\&quot; ?/>)' | awk '{print ($1 - 1 &lt; 1) ? 1 : $1 - 1}') bash -c 'sed -i -r \&quot;s/&lt;desktops number=\\\&quot;([0-9]+?)\\\&quot;/&lt;desktops number=\\\&quot;$D_NUM\\\&quot;/gm\&quot; ~/.config/labwc/rc.xml'; labwc -r &quot;" />
+        </keybind>
+
 
     </keyboard>
 
