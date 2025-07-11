@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<labwc_config>
+    <core>
+        <gap>0</gap>
+        <allowTearing>no</allowTearing>
+        <autoEnableOutputs>no</autoEnableOutputs>
+        <xwaylandPersistence>yes</xwaylandPersistence>
+    </core>
+
+    <placement>
+        <policy>cascade</policy>
+    </placement>
+
+    <windowSwitcher show="no" preview="yes" outlines="yes" allWorkspaces="no">
+
+    </windowSwitcher>
+</labwc_config>

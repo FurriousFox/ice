@@ -16,18 +16,18 @@ paru -S swaylock-fancy-git
 # todo
 
 labwc (openbox?) config:
-- lock (shortcut to `swaylock-fancy`)
+- lock (shortcut to `swaylock-fancy`) (oh, and lock on screen close / sleep / that stuff)
 - other generic window management shortcuts
 - ctrl+alt+t terminal
+- brightness control
 
 other stuff:
 - app launcher (+shortcut) (rofi-wayland `rofi -show drun`?)
 - notifications
 - clipboard manager (history?)
-- status bar
+- status bar (time, battery, wifi, notifications, workspace indicator)
+- pipewire
+- gnome (like?) popups aren't dark mode
 
 # accidental PR(s) to make stuff work
 [Support any WM implementing the wlr-output-management protocol #10](https://github.com/Big-B/swaylock-fancy/pull/10)
-
-# time spent
-00:13 - 02:48 (2h35m): swaylock-fancy, other stuff idk
