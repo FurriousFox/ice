@@ -368,40 +368,40 @@
         </keybind>
 
         <!-- move current without follow -->
-        <keybind key="W-A-S-[">
+        <keybind key="W-C-S-[">
             <action name="SendToDesktop" to="left" follow="no" wrap="true" />
         </keybind>
-        <keybind key="W-A-S-]">
+        <keybind key="W-C-S-]">
             <action name="SendToDesktop" to="right" follow="no" wrap="true" />
         </keybind>
-        <keybind key="W-A-S-1">
+        <keybind key="W-C-S-1">
             <action name="SendToDesktop" to="1" follow="no" wrap="false" />
         </keybind>
-        <keybind key="W-A-S-2">
+        <keybind key="W-C-S-2">
             <action name="SendToDesktop" to="2" follow="no" wrap="false" />
         </keybind>
-        <keybind key="W-A-S-3">
+        <keybind key="W-C-S-3">
             <action name="SendToDesktop" to="3" follow="no" wrap="false" />
         </keybind>
-        <keybind key="W-A-S-4">
+        <keybind key="W-C-S-4">
             <action name="SendToDesktop" to="4" follow="no" wrap="false" />
         </keybind>
-        <keybind key="W-A-S-5">
+        <keybind key="W-C-S-5">
             <action name="SendToDesktop" to="5" follow="no" wrap="false" />
         </keybind>
-        <keybind key="W-A-S-6">
+        <keybind key="W-C-S-6">
             <action name="SendToDesktop" to="6" follow="no" wrap="false" />
         </keybind>
-        <keybind key="W-A-S-7">
+        <keybind key="W-C-S-7">
             <action name="SendToDesktop" to="7" follow="no" wrap="false" />
         </keybind>
-        <keybind key="W-A-S-8">
+        <keybind key="W-C-S-8">
             <action name="SendToDesktop" to="8" follow="no" wrap="false" />
         </keybind>
-        <keybind key="W-A-S-9">
+        <keybind key="W-C-S-9">
             <action name="SendToDesktop" to="9" follow="no" wrap="false" />
         </keybind>
-        <keybind key="W-A-S-0">
+        <keybind key="W-C-S-0">
             <action name="SendToDesktop" to="10" follow="no" wrap="false" />
         </keybind>
 
@@ -410,20 +410,44 @@
             <action name="Execute"
                 command="bash -c 'grim -g &quot;$(slurp)&quot; >(tee ~/Screenshots/screenshot_$(date +%F-%H-%M-%S).png | wl-copy)'" />
         </keybind>
-        <keybind key="C-Print">
+        <keybind key="C-S-F5">
             <action name="Execute"
-                command="bash -c 'grim -g &quot;$(slurp)&quot; - | wl-copy'" />
+                command="bash -c 'grim -g &quot;$(slurp)&quot; >(tee ~/Screenshots/screenshot_$(date +%F-%H-%M-%S).png | wl-copy)'" />
         </keybind>
 
         <!-- notification -->
 
         <!-- files -->
+        <keybind key="W-e">
+            <action name="Execute" command="nautilus" />
+        </keybind>
+        <keybind key="A-S-m">
+            <action name="Execute" command="nautilus" />
+        </keybind>
 
-        <!-- taskmgr -->
+        <!-- btop -->
+        <keybind key="C-S-Escape">
+            <action name="Execute" command="gtk-launch btop" />
+        </keybind>
+        <keybind key="C-W-Escape">
+            <action name="Execute" command="gtk-launch btop" />
+        </keybind>
+        <keybind key="W-Escape">
+            <action name="Execute" command="gtk-launch btop" />
+        </keybind>
 
         <!-- slaapstand -->
+        <keybind key="W-S-l">
+            <action name="Execute" command="systemctl suspend" />
+        </keybind>
 
         <!-- run box -->
+        <keybind key="W-r">
+            <action name="Execute" command="rofi -show drun" />
+        </keybind>
+        <keybind key="C-Space">
+            <action name="Execute" command="rofi -show drun" />
+        </keybind>
 
         <!-- clipboard history -->
 
@@ -433,6 +457,12 @@
 
         <!-- bluetooth? -->
     </keyboard>
+
+    <libinput>
+        <device>
+            <clickMethod>clickfinger</clickMethod>
+        </device>
+    </libinput>
 
     <windowRules>
         <windowRule identifier="Alacritty" matchOnce="yes" skipWindowSwitcher="true" />
