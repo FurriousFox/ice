@@ -9,19 +9,13 @@ tbd
 # installation (arch)
 
 ```sh
-pacman -S kanshi labwc xorg-xhost xorg-xwayland swaybg xdg-desktop-portal-gtk adwaita-qt polkit-gnome wl-clip-persist rofi-wayland swaylock wlr-randr brightnessctl alsa-utils grim slurp wl-clipboard nautilus
-paru -S swaylock-fancy-git
+pacman -S kanshi labwc xorg-xhost xorg-xwayland swaybg xdg-desktop-portal-gtk adwaita-qt polkit-gnome wl-clip-persist rofi-wayland swaylock wlr-randr brightnessctl alsa-utils grim slurp wl-clipboard nautilus alacritty swayidle
+paru -S swaylock-fancy-git wlopm
 mkdir ~/Screenshots/
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
 
 # todo
-
-labwc (openbox?) config:
-- lock (shortcut to `swaylock-fancy`) (oh, and lock on screen close / sleep / that stuff)
-- other generic window management shortcuts
-- ctrl+alt+t terminal
-- brightness control
 
 other stuff:
 - app launcher (+shortcut) (rofi-wayland `rofi -show drun`?)

@@ -1,0 +1,2 @@
+TERMINAL=/usr/bin/gnome-terminal
+XKB_DEFAULT_LAYOUT=us(intl-altgr)

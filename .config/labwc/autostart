@@ -1,0 +1,12 @@
+sed -i -r 's/<desktops number="([0-9]+?)"/<desktops number="1"/gm' ~/.config/labwc/rc.xml >/dev/null 2>&1 &
+labwc -r >/dev/null 2>&1 &
+(killall wl-clip-persist && wl-clip-persist --clipboard regular) >/dev/null 2>&1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 >/dev/null 2>&1 &
+kanshi >/dev/null 2>&1 &
+swaybg -i wallpapers/b-926.jpg >/dev/null 2>&1 &
+swayidle -w \
+    timeout 300 'swaylock-fancy --daemonize && sleep 1' \
+    timeout 600 'wlopm --off \*' \
+    resume 'wlopm --on \*' \
+    before-sleep 'sh -c "swaylock-fancy --daemonize && sleep 1"' >/dev/null 2>&1 &
+xhost +SI:localuser:root >/dev/null 2>&1 &

@@ -33,7 +33,7 @@
         <region name="center" x="10%" y="10%" width="80%" height="80%" />
     </regions>
 
-    <desktops number="3" />
+    <desktops number="1" />
 
     <theme>
         <!-- <name>onyx</name> -->
@@ -144,6 +144,22 @@
             <action name="Execute" command="amixer sset Master toggle" />
         </keybind>
 
+
+        <keybind key="C-XF86_MonBrightnessUp">
+            <action name="Execute" command="brightnessctl set +5%" />
+        </keybind>
+
+        <keybind key="C-XF86_MonBrightnessDown">
+            <action name="Execute" command="brightnessctl set 5%-" />
+        </keybind>
+
+        <keybind key="C-XF86_AudioRaiseVolume">
+            <action name="Execute" command="amixer sset Master 2%+" />
+        </keybind>
+
+        <keybind key="C-XF86_AudioLowerVolume">
+            <action name="Execute" command="amixer sset Master 2%-" />
+        </keybind>
 
         <keybind key="S-XF86_MonBrightnessUp">
             <action name="Execute" command="brightnessctl set +5%" />
@@ -447,6 +463,13 @@
         </keybind>
         <keybind key="C-Space">
             <action name="Execute" command="rofi -show drun" />
+        </keybind>
+        <keybind key="A-F3">
+            <action name="Execute" command="rofi -show drun" />
+        </keybind>
+
+        <keybind key="C-A-Delete">
+            <action name="Exit" />
         </keybind>
 
         <!-- clipboard history -->
