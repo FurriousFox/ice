@@ -10,7 +10,9 @@ also, some virtual desktop management stuff is **very** hacky, but as long as it
 - Files: nautilus
 - Launcher: rofi
 - Lockscreen: swaylock-fancy
-
+- Notifications: swaync
+- Status Bar: Waybar
+- Emoji picker: rofi-emoji
 
 # screenshots
 
@@ -19,7 +21,7 @@ tbd
 # installation (arch)
 
 ```sh
-sudo pacman -S kanshi labwc xorg-xhost xorg-xwayland swaybg xdg-desktop-portal-gtk adwaita-qt polkit-gnome wl-clip-persist rofi-wayland swaylock wlr-randr brightnessctl alsa-utils grim slurp wl-clipboard nautilus alacritty swayidle pipewire gnome-terminal cliphist
+sudo pacman -S kanshi labwc xorg-xhost xorg-xwayland swaybg xdg-desktop-portal-gtk adwaita-qt polkit-gnome wl-clip-persist rofi-wayland swaylock wlr-randr brightnessctl alsa-utils grim slurp wl-clipboard nautilus alacritty swayidle pipewire gnome-terminal cliphist swaync waybar otf-font-awesome xdg-desktop-portal xdg-desktop-portal-wlr qt6-wayland qt5-wayland rofi-emoji wtype pipewire-pulse pavucontrol
 paru -S swaylock-fancy-git wlopm
 mkdir ~/Screenshots/
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
@@ -28,7 +30,6 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 # todo
 
 other stuff:
-- notifications
 - status bar (time, battery, wifi, notifications, workspace indicator, bluetooth, brightness, volume)
 - gnome (like?) popups aren't dark mode, nor is gparted
 - title bar dark theming

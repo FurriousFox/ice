@@ -1,6 +1,9 @@
 sed -i -r 's/<desktops number="([0-9]+?)"/<desktops number="1"/gm' ~/.config/labwc/rc.xml >/dev/null 2>&1
 wl-paste --watch cliphist store >/dev/null 2>&1 &
 labwc -r >/dev/null 2>&1 &
+pipewire-pulse >/dev/null 2>&1 &
+swaync >/dev/null 2>&1 &
+(/usr/lib/xdg-desktop-portal -r & /usr/lib/xdg-desktop-portal-wlr) >/dev/null 2>&1 &
 (killall wl-clip-persist && wl-clip-persist --clipboard regular) >/dev/null 2>&1 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 >/dev/null 2>&1 &
 kanshi >/dev/null 2>&1 &

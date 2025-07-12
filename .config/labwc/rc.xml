@@ -33,7 +33,7 @@
         <region name="center" x="10%" y="10%" width="80%" height="80%" />
     </regions>
 
-    <desktops number="1" />
+    <desktops number="2" />
 
     <theme>
         <!-- <name>onyx</name> -->
@@ -133,11 +133,11 @@
         </keybind>
 
         <keybind key="XF86_AudioRaiseVolume">
-            <action name="Execute" command="amixer sset Master 5%+" />
+            <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ +5%" />
         </keybind>
 
         <keybind key="XF86_AudioLowerVolume">
-            <action name="Execute" command="amixer sset Master 5%-" />
+            <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ -5%" />
         </keybind>
 
         <keybind key="XF86_AudioMute">
@@ -154,11 +154,11 @@
         </keybind>
 
         <keybind key="C-XF86_AudioRaiseVolume">
-            <action name="Execute" command="amixer sset Master 2%+" />
+            <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ +2%" />
         </keybind>
 
         <keybind key="C-XF86_AudioLowerVolume">
-            <action name="Execute" command="amixer sset Master 2%-" />
+            <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ -2%" />
         </keybind>
 
         <keybind key="S-XF86_MonBrightnessUp">
@@ -431,8 +431,6 @@
                 command="bash -c 'grim -g &quot;$(slurp)&quot; >(tee ~/Screenshots/screenshot_$(date +%F-%H-%M-%S).png | wl-copy)'" />
         </keybind>
 
-        <!-- notification -->
-
         <!-- files -->
         <keybind key="W-e">
             <action name="Execute" command="nautilus" />
@@ -481,7 +479,20 @@
                 command="sh -c 'cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy'" />
         </keybind>
 
+        <!-- notification -->
+        <keybind key="W-n">
+            <action name="Execute"
+                command="swaync-client -t -sw" />
+        </keybind>
+        <keybind key="A-S-s">
+            <action name="Execute"
+                command="swaync-client -t -sw" />
+        </keybind>
+
         <!-- emoji chooser -->
+        <keybind key="W-.">
+            <action name="Execute" command="rofi -show emoji -modes emoji" />
+        </keybind>
 
         <!-- hide cursor when typing -->
 
