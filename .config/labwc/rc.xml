@@ -125,11 +125,11 @@
         </keybind>
 
         <keybind key="XF86_MonBrightnessUp">
-            <action name="Execute" command="brightnessctl set +10%" />
+            <action name="Execute" command="brightnessctl set +2%" />
         </keybind>
 
         <keybind key="XF86_MonBrightnessDown">
-            <action name="Execute" command="brightnessctl set 10%-" />
+            <action name="Execute" command="brightnessctl set 2%-" />
         </keybind>
 
         <keybind key="XF86_AudioRaiseVolume">
@@ -144,15 +144,6 @@
             <action name="Execute" command="amixer sset Master toggle" />
         </keybind>
 
-
-        <keybind key="C-XF86_MonBrightnessUp">
-            <action name="Execute" command="brightnessctl set +5%" />
-        </keybind>
-
-        <keybind key="C-XF86_MonBrightnessDown">
-            <action name="Execute" command="brightnessctl set 5%-" />
-        </keybind>
-
         <keybind key="C-XF86_AudioRaiseVolume">
             <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ +2%" />
         </keybind>
@@ -161,20 +152,12 @@
             <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ -2%" />
         </keybind>
 
-        <keybind key="S-XF86_MonBrightnessUp">
-            <action name="Execute" command="brightnessctl set +5%" />
-        </keybind>
-
-        <keybind key="S-XF86_MonBrightnessDown">
-            <action name="Execute" command="brightnessctl set 5%-" />
-        </keybind>
-
         <keybind key="S-XF86_AudioRaiseVolume">
-            <action name="Execute" command="amixer sset Master 2%+" />
+            <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ +2%" />
         </keybind>
 
         <keybind key="S-XF86_AudioLowerVolume">
-            <action name="Execute" command="amixer sset Master 2%-" />
+            <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ -2%" />
         </keybind>
 
         <!-- workspaces -->

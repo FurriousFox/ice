@@ -21,7 +21,7 @@ tbd
 # installation (arch)
 
 ```sh
-sudo pacman -S kanshi labwc xorg-xhost xorg-xwayland swaybg xdg-desktop-portal-gtk adwaita-qt polkit-gnome wl-clip-persist rofi-wayland swaylock wlr-randr brightnessctl alsa-utils grim slurp wl-clipboard nautilus alacritty swayidle pipewire gnome-terminal cliphist swaync waybar otf-font-awesome xdg-desktop-portal xdg-desktop-portal-wlr qt6-wayland qt5-wayland rofi-emoji wtype pipewire-pulse pavucontrol
+sudo pacman -S kanshi labwc xorg-xhost xorg-xwayland swaybg xdg-desktop-portal-gtk adwaita-qt polkit-gnome wl-clip-persist rofi-wayland swaylock wlr-randr brightnessctl alsa-utils grim slurp wl-clipboard nautilus alacritty swayidle pipewire gnome-terminal cliphist swaync waybar otf-font-awesome xdg-desktop-portal xdg-desktop-portal-wlr qt6-wayland qt5-wayland rofi-emoji wtype pipewire-pulse pavucontrol ttf-nerd-fonts-symbols-mono
 paru -S swaylock-fancy-git wlopm
 mkdir ~/Screenshots/
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'

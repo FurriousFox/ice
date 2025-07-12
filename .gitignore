@@ -7,6 +7,8 @@
 !.config/labwc/**
 !.config/kanshi/
 !.config/kanshi/**
+!.config/waybar/
+!.config/waybar/**
 !.config/electron-flags.conf
 !.config/code-flags.conf
 
