@@ -16,7 +16,8 @@ also, some virtual desktop management stuff is **very** hacky, but as long as it
 
 # screenshots
 
-tbd
+![screenshot](Screenshots/screenshot_2025-07-12-07-42-39.png)
+![another screenshot](Screenshots/screenshot_2025-07-12-07-48-31.png)
 
 # installation (arch)
 
@@ -26,11 +27,6 @@ paru -S swaylock-fancy-git wlopm
 mkdir ~/Screenshots/
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
-
-# todo
-
-other stuff:
-- title bar dark theming
 
 # accidental PR(s) to make stuff work
 [Support any WM implementing the wlr-output-management protocol #10](https://github.com/Big-B/swaylock-fancy/pull/10)

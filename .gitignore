@@ -15,5 +15,8 @@
 !wallpapers/
 !wallpapers/b-926.jpg
 
+!Screenshots/
+!Screenshots/**
+
 !.gitignore
 !README.md
