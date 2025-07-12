@@ -16,8 +16,8 @@ also, some virtual desktop management stuff is **very** hacky, but as long as it
 
 # screenshots
 
-![screenshot](Screenshots/screenshot_2025-07-12-07-42-39.png)
-![another screenshot](Screenshots/screenshot_2025-07-12-07-48-31.png)
+![screenshot](Screenshots/screenshot_2025-07-12-07-48-31.png)
+![another screenshot](Screenshots/screenshot_2025-07-12-14-19-29.png)
 
 # installation (arch)
 
