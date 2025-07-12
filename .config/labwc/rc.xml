@@ -461,6 +461,9 @@
         <keybind key="W-r">
             <action name="Execute" command="rofi -show drun" />
         </keybind>
+        <keybind key="W-z">
+            <action name="Execute" command="rofi -show drun" />
+        </keybind>
         <keybind key="C-Space">
             <action name="Execute" command="rofi -show drun" />
         </keybind>
@@ -473,6 +476,10 @@
         </keybind>
 
         <!-- clipboard history -->
+        <keybind key="W-v">
+            <action name="Execute"
+                command="sh -c 'cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy'" />
+        </keybind>
 
         <!-- emoji chooser -->
 
