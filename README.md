@@ -30,8 +30,6 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 # todo
 
 other stuff:
-- status bar (time, battery, wifi, notifications, workspace indicator, bluetooth, brightness, volume)
-- gnome (like?) popups aren't dark mode, nor is gparted
 - title bar dark theming
 
 # accidental PR(s) to make stuff work

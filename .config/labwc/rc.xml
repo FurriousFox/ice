@@ -409,6 +409,10 @@
             <action name="Execute"
                 command="bash -c 'grim -g &quot;$(slurp)&quot; >(tee ~/Screenshots/screenshot_$(date +%F-%H-%M-%S).png | wl-copy)'" />
         </keybind>
+        <keybind key="C-Print">
+            <action name="Execute"
+                command="bash -c 'grim >(tee ~/Screenshots/screenshot_$(date +%F-%H-%M-%S).png | wl-copy)'" />
+        </keybind>
         <keybind key="C-S-F5">
             <action name="Execute"
                 command="bash -c 'grim -g &quot;$(slurp)&quot; >(tee ~/Screenshots/screenshot_$(date +%F-%H-%M-%S).png | wl-copy)'" />
