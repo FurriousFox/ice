@@ -1,3 +1,6 @@
 TERMINAL=/usr/bin/gnome-terminal
 XKB_DEFAULT_LAYOUT=us(intl-altgr)
 QT_QPA_PLATFORM=wayland
+ELECTRON_OZONE_PLATFORM_HINT=wayland
+
+GTK_USE_PORTAL=1

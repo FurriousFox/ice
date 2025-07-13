@@ -23,9 +23,13 @@ also, some virtual desktop management stuff is **very** hacky, but as long as it
 
 ```sh
 sudo pacman -S kanshi labwc xorg-xhost xorg-xwayland swaybg xdg-desktop-portal-gtk adwaita-qt polkit-gnome wl-clip-persist rofi-wayland swaylock wlr-randr brightnessctl alsa-utils grim slurp wl-clipboard nautilus alacritty swayidle pipewire gnome-terminal cliphist swaync waybar otf-font-awesome xdg-desktop-portal xdg-desktop-portal-wlr qt6-wayland qt5-wayland rofi-emoji wtype pipewire-pulse pavucontrol ttf-nerd-fonts-symbols-mono
-paru -S swaylock-fancy-git wlopm
+paru -S swaylock-fancy-git wlopm adwaita-qt5-git adwaita-qt6-git
 mkdir ~/Screenshots/
+
+# dark mode:
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-Dark'
+# beyond this, I'm clueless, so just `pacman -S nwg-look`, open `nwg-look` and apply 'Adwaita-Dark' using the UI
 ```
 
 # accidental PR(s) to make stuff work

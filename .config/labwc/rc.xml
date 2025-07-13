@@ -30,10 +30,10 @@
     </snapping>
 
     <regions>
-        <region name="center" x="10%" y="10%" width="80%" height="80%" />
+        <region name="center" x="15%" y="15%" width="70%" height="70%" />
     </regions>
 
-    <desktops number="2" />
+    <desktops number="3" />
 
     <theme>
         <!-- <name>onyx</name> -->
@@ -87,6 +87,10 @@
             <action name="AutoPlace" policy="center" />
         </keybind>
 
+        <keybind key="W-c">
+            <action name="SnapToRegion" region="center" />
+        </keybind>
+
         <keybind key="W-a">
             <action name="ToggleMaximize" />
         </keybind>
@@ -124,39 +128,39 @@
             <action name="ShowMenu" menu="client-menu" atCursor="no" />
         </keybind>
 
-        <keybind key="XF86_MonBrightnessUp">
+        <keybind key="XF86_MonBrightnessUp" allowWhenLocked="yes">
             <action name="Execute" command="brightnessctl set +2%" />
         </keybind>
 
-        <keybind key="XF86_MonBrightnessDown">
+        <keybind key="XF86_MonBrightnessDown" allowWhenLocked="yes">
             <action name="Execute" command="brightnessctl set 2%-" />
         </keybind>
 
-        <keybind key="XF86_AudioRaiseVolume">
+        <keybind key="XF86_AudioRaiseVolume" allowWhenLocked="yes">
             <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ +5%" />
         </keybind>
 
-        <keybind key="XF86_AudioLowerVolume">
+        <keybind key="XF86_AudioLowerVolume" allowWhenLocked="yes">
             <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ -5%" />
         </keybind>
 
-        <keybind key="XF86_AudioMute">
+        <keybind key="XF86_AudioMute" allowWhenLocked="yes">
             <action name="Execute" command="amixer sset Master toggle" />
         </keybind>
 
-        <keybind key="C-XF86_AudioRaiseVolume">
+        <keybind key="C-XF86_AudioRaiseVolume" allowWhenLocked="yes">
             <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ +2%" />
         </keybind>
 
-        <keybind key="C-XF86_AudioLowerVolume">
+        <keybind key="C-XF86_AudioLowerVolume" allowWhenLocked="yes">
             <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ -2%" />
         </keybind>
 
-        <keybind key="S-XF86_AudioRaiseVolume">
+        <keybind key="S-XF86_AudioRaiseVolume" allowWhenLocked="yes">
             <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ +2%" />
         </keybind>
 
-        <keybind key="S-XF86_AudioLowerVolume">
+        <keybind key="S-XF86_AudioLowerVolume" allowWhenLocked="yes">
             <action name="Execute" command="pactl set-sink-volume @DEFAULT_SINK@ -2%" />
         </keybind>
 
@@ -438,7 +442,7 @@
         </keybind>
 
         <!-- slaapstand -->
-        <keybind key="W-S-l">
+        <keybind key="W-S-l" allowWhenLocked="yes">
             <action name="Execute" command="systemctl suspend" />
         </keybind>
 
@@ -447,6 +451,9 @@
             <action name="Execute" command="rofi -show drun" />
         </keybind>
         <keybind key="W-z">
+            <action name="Execute" command="rofi -show drun" />
+        </keybind>
+        <keybind key="W-Space">
             <action name="Execute" command="rofi -show drun" />
         </keybind>
         <keybind key="C-Space">
